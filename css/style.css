@@ -543,13 +543,13 @@ textarea {
     display: flex;
     align-items: center;
     width: 570px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     padding: 40px 0 23px 0;
 }
 .footer .social-media__text li {
     padding-right: 49px;
 }
-. footer .social-media__text li:last-child {
+.footer .social-media__text li:last-child {
     padding-right: 0;
 }
 .footer-text {
