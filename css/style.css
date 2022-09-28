@@ -539,17 +539,17 @@ textarea {
     background-color: #000;
     color: #fff;
 }
-.menu-bottom {
+.footer .social-media__text {
     display: flex;
     align-items: center;
     width: 570px;
     margin: 0 auto 0 auto;
     padding: 40px 0 23px 0;
 }
-.menu-bottom li {
+.footer .social-media__text li {
     padding-right: 49px;
 }
-.menu-bottom li:last-child {
+. footer .social-media__text li:last-child {
     padding-right: 0;
 }
 .footer-text {
