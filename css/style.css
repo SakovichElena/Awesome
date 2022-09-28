@@ -514,9 +514,9 @@ button.outlined:hover {
 .form-info__place {
     margin-bottom: 0;
 }
-textarea {
-    font-family: inherit;
-    min-height: 219px;
+.form-right {
+    width: 569px;
+    height: 192px;
 }
 .message-field {
     outline: none;
@@ -524,6 +524,14 @@ textarea {
     width: 569px;
     padding: 16px 0;
     line-height: 19px;
+}
+textarea {
+    font-family: inherit;
+    height: 169px;
+    border: none;
+    border-bottom: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    resize: none;
 }
 .form-self {
     width: 569px;
