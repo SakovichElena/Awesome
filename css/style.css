@@ -292,8 +292,7 @@ hr {
     display: flex;
     /* justify-content: space-between; */
     padding: 0;
-    vertical-align: top;
-    /* gap: 30px;                                                         */
+    vertical-align: top;                                                         
 }
 .column {
     vertical-align: top;
