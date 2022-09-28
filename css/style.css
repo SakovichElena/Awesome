@@ -59,22 +59,31 @@ h4 {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 75px;
     justify-content: space-between;
 }
 nav li a {
     display: block;
     height: 75px;
     line-height: 75px;
+    width: 113px;
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     color: #FFF;
 }
-.nav li:not(:first-child) {
-    margin-left: 60px;
+nav li a:hover {
+    background-color:#EC7979;
+    ;
 }
+nav li a:active {
+    background-color:#AB4949;
+}
+/* .nav li:not(:first-child) { */
+    /* margin-left: 60px; */
+
+/* } */
 .nav__menu {
     display: flex;
 }
@@ -209,7 +218,7 @@ input::placeholder {
     margin-left: auto;
 }
 .tab-container {
-    margin: 150px 0;
+    margin: 138px 0 50px;
 }
 .tab-wrapper {
     position: relative;
@@ -279,31 +288,25 @@ hr {
     font-size: 24px;
     font-weight: 700;
 }
-.pricing__list {
+.row {
     display: flex;
+    /* justify-content: space-between; */
     padding: 0;
     vertical-align: top;
-    /* margin: 0 15px;                                                                 */
-    /* text-align: center; */
+    /* gap: 30px;                                                         */
 }
-.advantages {
+.column {
     vertical-align: top;
-    max-width: 370px;
-    /* margin: 0 15px;  */
-    margin: 30px 0px 0px 30px;                                             
-    text-align: center;
+    width: 370px;
 }
-.advantages:first-child{
-    margin: 30px 0px 0px 0px;
-}
-.pricing__list  .icons {
+.row  .icons {
     position: relative;
     display: block;
     margin: 40px auto 68px;
     width: 92px;
     height: 92px;
 }
-.pricing__list  .icons img {
+.row  .icons img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -372,7 +375,7 @@ hr {
 }
 .comments {
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 64px;
 }
 .text-block {
     display: flex;
@@ -389,27 +392,33 @@ hr {
 }
 .text-block .comment {
     position: relative;
-    padding: 38px 0 37px;
+    padding: 38px 25px 37px;
     background-color: #E2E2E2;
+    color: #86878B;
+    box-sizing: border-box;
     width: 370px;
     margin: 0;
     border-radius: 10px;
 }
-/* .words::after { */
-    /* content: ''; */
-    /* position: absolute; */
-    /* left: 20px bottom -20px; */
-    /* border: 10px solid transparent; */
-    /* border-top: 10px solid #E2E2E2; */
-/* } */
-.triangle {
+.comment::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #E2E2E2;
+    top: 100%;
+    left: 70px;
+}
+/* .triangle {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 20px solid #E2E2E2;
     margin-left: 70px;
-}
+} */
 .review {
     display: flex;
     flex-direction: row;
@@ -431,31 +440,26 @@ hr {
     justify-content: flex-start;
     margin: 0 auto 0 100px;
 }
-.city {
+.block-download {
     position: relative;
     text-align: center;
     background-image: url(../image/city.jpg);
     background-position: bottom;
     background-size: contain;
-    height: 442px;
+    padding: 50px 0;
     color: #fff;
 }
-.city:before {
+.block-download:before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.5);
 }
-.design {
-    margin: 0;
-    padding: 50px 0 0 0;
-    line-height: 150px;
-}
 .white-line {
     margin: 0 auto;
     background-color: #fff;
 }
-.sentense {
+.offer {
     margin: 40px auto 73px auto;
 }
 button.outlined {
@@ -463,7 +467,7 @@ button.outlined {
     border: 2px solid #fff;
     font-size: 18px;
     width: 370px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
 }
 button.outlined:hover {
     border-color: #EC7979;
@@ -478,9 +482,13 @@ button.outlined:hover {
 }
 .form-content {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    vertical-align: top;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 300px;
+}
+.form-content> * {
+    flex: 1;
 }
 .form-left {
     margin-right: 30px;
@@ -490,7 +498,7 @@ button.outlined:hover {
     margin: 0 0 35px 0;
 }
 .form-field {
-    width: 571px;
+    width: 570px;
     line-height: 19px;
     padding: 15px 0;
     border: none;
@@ -504,6 +512,10 @@ button.outlined:hover {
 }
 .form-info__place {
     margin-bottom: 0;
+}
+textarea {
+    font-family: inherit;
+    min-height: 219px;
 }
 .message-field {
     outline: none;
