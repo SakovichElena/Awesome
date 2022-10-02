@@ -80,10 +80,6 @@ nav li a:hover {
 nav li a:active {
     background-color:#AB4949;
 }
-/* .nav li:not(:first-child) { */
-    /* margin-left: 60px; */
-
-/* } */
 .nav__menu {
     display: flex;
 }
@@ -229,24 +225,27 @@ input::placeholder {
     bottom: 100%;
     margin-bottom: -1px;
 }
-.tab-list li {
+.tab-list a {
+    display: flex;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
     padding: 10px 80px;
     border-radius: 5px 5px 0 0;
     border: 1px solid transparent;
     cursor: pointer;
-}
-.tab-list li:hover {
+} 
+.tab-list a:hover {
     border: 1px solid #C6CBCD;
     border-bottom: 0;
-}
-.tab-list li.active {
+} 
+ .tab-list a.active {
     border: 1px solid #C6CBCD;
     background: #fff;
     border-bottom: 0;
-}
+} 
 .tab-content {
     display: flex;
     border: 1px solid #C6CBCD;
@@ -254,10 +253,14 @@ input::placeholder {
 .tab-info {
     margin-left: 100px;
     width: 570px;
+    /* display: none; */
 }
 .tab-info h3 {
     margin: 70px 0;
 }
+/* .tab-info:target {
+    display: block;
+} */
 .tab-content button {
     margin: 20px 0;
 }
@@ -296,6 +299,7 @@ hr {
     vertical-align: top;
     width: 370px;
 }
+
 .row  .icons {
     position: relative;
     display: block;
@@ -373,20 +377,20 @@ hr {
     text-align: center;
     padding: 50px 0 64px;
 }
-.b-comments ul {
+.b-comments .thought {
     display: flex;
     justify-content: space-between;
     margin: 0;
     list-style: none;
     padding-top: 13px;
 }
-.b-comments ul li {
+.b-comments .items {
     text-align: center;
     padding-top: 0;
     vertical-align: top;
     margin-top: 0;
 }
-.b-comments ul .comment {
+.b-comments .thought .comment {
     position: relative;
     padding: 38px 25px 37px;
     background-color: #E2E2E2;
@@ -396,7 +400,7 @@ hr {
     margin: 0;
     border-radius: 10px;
 }
-.b-comments ul .comment:after {
+.b-comments .thought .comment:after {
     content: '';
     position: absolute;
     width: 0;
@@ -408,22 +412,22 @@ hr {
     top: 100%;
     left: 70px;
 }
-.b-comments ul .review {
+.b-comments .thought .review {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     /* height: 70px; */
     margin-top: 46px;
 }
-.b-comments ul li img {
+.b-comments .thought .items img {
     width: 70px;
     height: 70px;
     padding-right: 30px;
 }
-.b-comments ul li .info {
+.b-comments .thought .items .info {
     text-align: left;
 }
-.b-comments ul li .name {
+.b-comments .thought .items .name {
     margin: 0 0 15px;
     line-height: 54px;
 }
@@ -509,8 +513,9 @@ textarea {
 .footer .social-media__links li {
     padding-right: 49px;
 }
-.footer .social-media__text li:last-child {
+.footer .social-media__links li:last-child {
     padding-right: 0;
+
 }
 .footer-text {
     text-align: center;
